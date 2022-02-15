@@ -15,6 +15,7 @@ class C extends React.PureComponent<ChildProps<Props, MeQuery>> {
       return null;
     }
 
+
     if (!data.me) {
       // user not logged in
       return (
@@ -31,6 +32,7 @@ class C extends React.PureComponent<ChildProps<Props, MeQuery>> {
 
     return <Component {...routeProps} />;
   };
+  props: { data: any; component: any; };
 
   render() {
     const { data: _, component: __, ...rest } = this.props;
